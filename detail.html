@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/testimonial.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Animation css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Font family -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="bg-white w-full z-[1000]" id="header">
+      <div class="top-header">
+        <ul class="top-header-left">
+          <li><em class="fas fa-headset"></em> 0243.5690436</li>
+          <li><em class="fas fa-envelope"></em> mkt@vdigital.vn</li>
+        </ul>
+        <div class="top-header-right flex gap-5 justify-center">
+          <ul class="contact">
+            <li>
+              <a href="/hop-tac-kinh-doanh">Hợp tác kinh doanh</a>
+            </li>
+            <li>
+              <a href="/tuyen-dung">Tuyển dụng</a>
+            </li>
+            <li>
+              <a href="/lien-he">Liên hệ</a>
+            </li>
+          </ul>
+          <ul class="language">
+            <li>
+              <button><strong>EN</strong></button>
+            </li>
+            <li>
+              <button><strong>VN</strong></button>
+            </li>
+          </ul>
+          <button onclick="toggleSearchModal()" class="hover:cursor-pointer">
+            <em class="fas fa-search search-icon"></em> Tìm kiếm
+          </button>
+        </div>
+      </div>
+
+      <header class="navbar sticky">
+        <a href="#" title="VDigital"
+          ><img
+            src="https://vdigital.vn/wp-content/uploads/2022/09/VDI-logo.svg"
+            alt="logo"
+            width="160px"
+            height="45px"
+        /></a>
+        <div class="menu-btn">
+          <div class="menu-btn__lines"></div>
+        </div>
+        <ul class="menu-items">
+          <div class="logo-sm">
+            <button class="close-btn text-white">
+              <em class="fas fa-times"></em>
+            </button>
+            <a href="#" title="VDigital"
+              ><img
+                src="https://vdigital.vn/wp-content/uploads/2022/09/VDI-logo.svg"
+                alt="logo"
+                width="100%"
+                height="45px"
+            /></a>
+          </div>
+          <li class="dropdown">
+            <a
+              href="/linh-vuc-hoat-dong"
+              class="menu-item first-item expand-btn"
+              >Lĩnh Vực Hoạt Động
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu sample">
+              <li class="dropdown dropdown-right">
+                <a href="/tich-hop-he-thong" class="menu-item expand-btn"
+                  >Tích Hợp Hệ Thống
+                  <i class="fa-solid fa-angle-right icon-pc"></i>
+                  <i class="fa-solid fa-angle-down icon-sm"></i>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="/may-chu-va-luu-tru"
+                      >Máy Chủ Và Lưu Trữ</a
+                    >
+                  </li>
+                  <li>
+                    <a class="menu-item" href="/giai-phap-mang-vdi"
+                      >Giải Pháp Mạng VDI</a
+                    >
+                  </li>
+                  <li>
+                    <a class="menu-item" href="/hoi-nghi-truyen-hinh"
+                      >Hội Nghị Truyền Hình</a
+                    >
+                  </li>
+                  <li>
+                    <a class="menu-item" href="/trung-tam-du-lieu"
+                      >Trung Tâm Dữ Liệu</a
+                    >
+                  </li>
+                  <li>
+                    <a class="menu-item" href="/an-ninh-an-toan-thong-tin"
+                      >An Ninh An Toàn Thông Tin</a
+                    >
+                  </li>
+                  <li>
+                    <a class="menu-item" href="/dien-toan-dam-may"
+                      >Điện Toán Đám Mây</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropdown-right">
+                <a href="/chuyn-doi-so" class="menu-item expand-btn"
+                  >Chuyển Đổi Số
+                  <i class="fa-solid fa-angle-right icon-pc"></i>
+                  <i class="fa-solid fa-angle-down icon-sm"></i>
+                </a>
+                <ul class="menu-right sample">
+                  <li>
+                    <a class="menu-item" href="/giai-phap-nganh"
+                      >Giải Pháp Ngành</a
+                    >
+                  </li>
+                  <li>
+                    <a class="menu-item" href="/thanh-pho-thong-minh"
+                      >Thành Phố Thông Minh</a
+                    >
+                  </li>
+                  <li>
+                    <a class="menu-item" href="/chuyen-doi-so-doanh-nghiep"
+                      >Chuyển Đổi Số Doanh Nghiệp</a
+                    >
+                  </li>
+                  <li>
+                    <a class="menu-item" href="/giai-phap-ung-dung"
+                      >Giải Pháp Ứng Dụng</a
+                    >
+                  </li>
+                  <li>
+                    <a class="menu-item" href="/cong-nghe">Công Nghệ</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="/vietlott-sms">VietlottSMS</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="/giai-phap-nganh" class="menu-item first-item expand-btn"
+              >Giải pháp ngành
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu sample">
+              <li>
+                <a class="menu-item" href="/chinh-phu-dien-tu"
+                  >Chính phủ điện tử</a
+                >
+              </li>
+              <li>
+                <a class="menu-item" href="/thanh-pho-thong-minh"
+                  >Thành phố thông minh</a
+                >
+              </li>
+              <li>
+                <a class="menu-item" href="/du-lich">Du lịch</a>
+              </li>
+              <li>
+                <a class="menu-item" href="/giao-thong">Giao thông</a>
+              </li>
+              <li>
+                <a class="menu-item" href="/nong-lam-thuy-san"
+                  >Nông - lâm - thủy sản</a
+                >
+              </li>
+              <li>
+                <a class="menu-item" href="/tai-nguyen-moi-truong"
+                  >Tài nguyên môi trường & viễn thám</a
+                >
+              </li>
+              <li>
+                <a class="menu-item" href="/quy-hoach-xay-dung"
+                  >Quy hoạch xây dựng & đô thị</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="/kho-tri-thuc" class="menu-item first-item expand-btn"
+              >Kho tri thức
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu sample">
+              <li>
+                <a class="menu-item" href="/cong-nghe">Công nghệ</a>
+              </li>
+              <li>
+                <a class="menu-item" href="/chinh-phu-so">Chính phủ số</a>
+              </li>
+              <li>
+                <a class="menu-item" href="/kinh-te-so">Kinh tế số</a>
+              </li>
+              <li>
+                <a class="menu-item" href="/xa-hoi-so">Xã hội số</a>
+              </li>
+              <li>
+                <a class="menu-item" href="/thanh-pho-thong-minh"
+                  >Thành phố thông minh</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="/chien-binh-vdi" class="menu-item first-item expand-btn"
+              >Chiến binh VDI
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu sample">
+              <li>
+                <a class="menu-item" href="/hoat-dong-noi-bo"
+                  >Hoạt động nội bộ</a
+                >
+              </li>
+              <li>
+                <a class="menu-item" href="/tin-tuc-cong-nghe"
+                  >Tin tức công nghệ</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="/ve-chung-toi" class="menu-item first-item expand-btn"
+              >Về chúng tôi
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="dropdown-menu sample">
+              <li>
+                <a class="menu-item" href="/dau-an-lich-su">Dấu ấn lịch sử</a>
+              </li>
+              <li>
+                <a class="menu-item" href="/tam-nhin">Tầm nhìn, sứ mệnh</a>
+              </li>
+              <li>
+                <a class="menu-item" href="/gia-tri-cot-loi">Giá trị cốt lõi</a>
+              </li>
+              <li>
+                <a class="menu-item" href="/van-hoa-vdi">Văn hóa VDI</a>
+              </li>
+              <li>
+                <a class="menu-item" href="/doi-tac-chien-luoc"
+                  >Đối tác chiến lược</a
+                >
+              </li>
+              <li>
+                <a class="menu-item" href="/khach-hang-tieu-bieu"
+                  >Khách hàng tiêu biểu</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </header>
+    </div>
+
+    <!-- Modal -->
+    <div
+      id="searchModal"
+      class="fixed inset-0 bg-black opacity-90 z-[1000] hidden items-start justify-center pt-32"
+    >
+      <!-- Modal content -->
+      <div class="relative w-full p-5! text-center">
+        <div class="float-right">
+          <button
+            class="text-white uppercase text-lg"
+            onclick="toggleSearchModal()"
+          >
+            Close
+          </button>
+        </div>
+        <div
+          class="flex rounded-md shadow-lg overflow-hidden bg-white max-w-3xl mx-4 mt-20! m-auto!"
+        >
+          <input
+            type="text"
+            placeholder="Tìm kiếm ..."
+            class="flex-1 px-6! py-4! text-lg text-gray-700 focus:outline-none"
+          />
+          <button
+            class="bg-pink-600 hover:bg-pink-700 px-4! py-3! text-white font-semibold text-sm uppercase"
+          >
+            Search Now
+          </button>
+        </div>
+      </div>
+    </div>
+    <main>
+      <!-- Breadcrumb -->
+      <div class="moving-bg">
+        <div>
+          <h1 class="text-5xl font-bold text-[#233e7a]">Chính phủ điện tử</h1>
+          <nav
+            aria-label="breadcrumb"
+            class="w-full flex justify-center text-[#233e7a] text-[17px]"
+          >
+            <ol class="flex h-8 space-x-2">
+              <li class="flex items-center">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="flex items-center hover:underline font-normal!"
+                  >Home</a
+                >
+              </li>
+              <li class="flex items-center space-x-1">
+                <span class="dark:text-gray-600">/</span>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="flex items-center px-1 font-normal!"
+                  >Chính phủ điện tử</a
+                >
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <div
+        class="max-w-[1200px] px-2.5 m-auto my-10 flex flex-col lg:flex-row lg:gap-10"
+      >
+        <div class="w-full lg:w-8/12 text-justify">
+          Chính phủ điện tử là ứng dụng công nghệ thông tin và truyền thông vào
+          các hệ thống làm việc, các chức năng và thủ tục của chính phủ nhằm
+          tăng hiệu quả, minh bạch và hỗ trợ người dân tốt hơn. Chính phủ điện
+          tử như một công cụ hỗ trợ quản trị hiệu quả. Khi có áp dụng chính phủ
+          điện tử thì quy trình sẽ được rút ngắn lại, thủ tục, dịch vụ công được
+          nâng cao chất lượng và việc trao đổi thông tin giữa các sở ban ngành
+          hay với người dân sẽ trở lên dễ dàng hơn.
+        </div>
+        <div
+          class="w-full lg:w-4/12 border-[1px] rounded-2xl border-[#ccc] p-4"
+        >
+          <h3 class="text-[22px] text-[#233b7a] mb-[55px]">
+            Bài viết mới nhất
+          </h3>
+          <div class="flex items-start gap-3">
+            <img
+              src="/images/image1.jpg"
+              alt="thumb"
+              class="w-20 h-16 object-cover rounded"
+              height="auto"
+              width="auto"
+            />
+            <div>
+              <a
+                href="#"
+                class="text-sm font-semibold text-blue-800 hover:underline"
+              >
+                5 vấn đề cốt lõi của chuyển đổi số
+              </a>
+              <p class="text-xs text-gray-500 mt-1">Tháng Tư 8, 2025</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <img
+              src="/images/image2.jpg"
+              alt="thumb"
+              class="w-20 h-16 object-cover rounded"
+              height="auto"
+              width="auto"
+            />
+            <div>
+              <a
+                href="#"
+                class="text-sm font-semibold text-gray-900 hover:underline"
+              >
+                DeepSeek là gì? Những điều bạn cần biết về DeepSeek
+              </a>
+              <p class="text-xs text-gray-500 mt-1">Tháng Ba 14, 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#020d31] text-[#aaadb7]">
+      <div class="pt-[125px] max-w-[1200px] mx-auto px-[15px]">
+        <div class="pb-[100px]">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            <div>
+              <a
+                href="#"
+                aria-label="Go home"
+                title="Company"
+                class="inline-flex items-center"
+              >
+                <img
+                  src="https://vdigital.vn/wp-content/uploads/2022/09/VDI-logo.svg"
+                  alt="logo"
+                  width="160px"
+                  height="45px"
+                />
+              </a>
+              <span>Copyright © 2022 VDI, All Rights Reserved.</span>
+              <div class="mt-4 flex">
+                <a href="#" class="icon-social-medial"
+                  ><i class="fa-brands fa-square-facebook"></i
+                ></a>
+                <a href="#" class="icon-social-medial"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+                <a href="#" class="icon-social-medial"
+                  ><i class="fa-brands fa-square-tumblr"></i
+                ></a>
+                <a href="#" class="icon-social-medial"
+                  ><i class="fa-brands fa-square-youtube"></i
+                ></a>
+              </div>
+            </div>
+            <div class="address">
+              <h3 class="font-semibold text-[24px] tracking-wide text-white">
+                Địa chỉ liên hệ
+              </h3>
+              <ul class="mt-2 space-y-2">
+                <li class="flex items-center">
+                  <i class="fa-solid fa-headphones me-1"></i>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                  >
+                    +0243.5690436 | 0986805511</a
+                  >
+                </li>
+                <li class="flex items-center">
+                  <i class="fa-solid fa-envelope me-1"></i>
+                  <a
+                    href=""
+                    class="relative inline-block text-black hover-line"
+                  >
+                    mkt@vdigital.vn</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-solid fa-earth-americas me-1"></i>Tầng 21, Tòa
+                  nhà ICON4, 243A Đê La Thành, Hà Nội.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[24px] tracking-wide text-white">
+                Giới thiệu
+              </h3>
+              <ul class="mt-2 space-y-2">
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Về chúng tôi</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Hợp tác kinh doanh</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Kho tri thức</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Tuyển Dụng</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Liên Hệ</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[24px] tracking-wide text-white">
+                Dịch vụ
+              </h3>
+              <ul class="mt-2 space-y-2">
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Tích hợp hệ thống</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Chuyển đổi số</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Điện toán đám mây</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >An ninh an toàn thông tin</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >Giải pháp công nghệ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative inline-block text-black hover-line"
+                    >VietlottSMS</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <img
+            src="/images/dmca_protected_sml_120l.png"
+            alt="dmca_protected_sml"
+            width="121px"
+            height="24px"
+          />
+        </div>
+        <div
+          class="flex flex-col justify-between pt-5 pb-10 border-t sm:flex-row"
+        >
+          <p class="text-gray-600">Privacy Policy - Terms & Conditions</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="overlay"></div>
+    <script src="js/main.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function toggleSearchModal() {
+        const modal = document.getElementById("searchModal");
+        modal.classList.toggle("hidden");
+        modal.classList.toggle("flex");
+      }
+    </script>
+  </body>
+</html>
