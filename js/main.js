@@ -77,20 +77,3 @@ expandBtn.forEach((btn) => {
         btn.classList.toggle("open");
     });
 });
-
-// Animation
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-        entry.target.classList.remove("opacity-0");
-        entry.target.classList.add("animate__animated", "animate__fadeInDown");
-        observer.unobserve(entry.target); // chỉ chạy 1 lần
-        }
-    });
-    }, {
-    threshold: 0.1
-});
-
-document.querySelectorAll('.animation-fade-in-down').forEach(section => {
-    observer.observe(section);
-});
