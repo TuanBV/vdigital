@@ -6,8 +6,16 @@ body {
   color: #233b7a;
 }
 
+.text-1d165c {
+  color: #1d165c;
+}
+
 .font-muli {
   font-family: "Muli", sans-serif;
+}
+
+.font-jose {
+  font-family: "Josefin Sans", sans-serif;
 }
 
 h1,
@@ -499,6 +507,11 @@ footer ul li a:hover {
   a,
   a:hover {
     color: white;
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: none !important;
   }
 
   .top-header {

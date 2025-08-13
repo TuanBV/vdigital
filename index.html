@@ -633,6 +633,41 @@
           </div>
         </div>
       </div>
+
+      <!-- Counter -->
+      <section class="max-w-6xl mx-auto px-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-1d165c"
+        >
+          <div class="flex items-center justify-start">
+            <div class="text-4xl font-bold font-jose">
+              <span class="counter font-jose" data-count="3.5">0</span>k
+            </div>
+            <h4 class="m-2 text-xl font-bold">Dự án đã triển khai</h4>
+          </div>
+
+          <div class="flex items-center justify-start">
+            <div class="text-4xl font-bold font-jose">
+              <span class="counter font-jose" data-count="155">0</span>k
+            </div>
+            <h4 class="m-2 text-xl font-bold">Khách hàng đã phục vụ</h4>
+          </div>
+
+          <div class="flex items-center justify-start">
+            <div class="text-4xl font-bold font-jose">
+              <span class="counter font-jose" data-count="99">0</span>%
+            </div>
+            <h4 class="m-2 text-xl font-bold">Khách hàng hài lòng</h4>
+          </div>
+
+          <div class="flex items-center justify-start">
+            <div class="text-4xl font-bold font-jose">
+              <span class="counter font-jose" data-count="3">0</span>k
+            </div>
+            <h4 class="m-2 text-xl font-bold">Việc làm cho người lao động</h4>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -812,12 +847,29 @@
     <script src="js/main.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Waypoints -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <!-- Counter-Up -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
     <!-- Slick JS -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script>
+      $(document).ready(function () {
+        $(".counter").each(function () {
+          let $this = $(this);
+          $this.text($this.attr("data-count"));
+          $this.counterUp({
+            delay: 10,
+            time: 1000,
+          });
+        });
+      });
       function toggleSearchModal() {
         const modal = document.getElementById("searchModal");
         modal.classList.toggle("hidden");
