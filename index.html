@@ -43,6 +43,69 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Waypoints -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <!-- Counter-Up -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+    <!-- Slick JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      function toggleSearchModal() {
+        const modal = document.getElementById("searchModal");
+        modal.classList.toggle("hidden");
+        modal.classList.toggle("flex");
+      }
+      $(document).ready(function () {
+        // Counter
+        $(".counter").each(function () {
+          let $this = $(this);
+          $this.text($this.attr("data-count"));
+          $this.counterUp({
+            delay: 10,
+            time: 1000,
+          });
+        });
+
+        // Carousel
+        $(".carousel").slick({
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          autoplay: true,
+          autoplaySpeed: 10000,
+          infinite: true,
+          speed: 500,
+          prevArrow:
+            '<button class="slick-prev custom-prev"><i class="fa-solid fa-angle-left"></i></button>',
+          nextArrow:
+            '<button class="slick-next custom-next"><i class="fa-solid fa-angle-right"></i></button>',
+          pauseOnHover: true,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="bg-white w-full z-[1000]" id="header">
@@ -641,28 +704,28 @@
         >
           <div class="flex items-center justify-start">
             <div class="text-4xl font-bold font-jose">
-              <span class="counter font-jose" data-count="3.5">0</span>k
+              <span class="counter font-jose" data-count="3.5">3.5</span>k
             </div>
             <h4 class="m-2 text-xl font-bold">Dự án đã triển khai</h4>
           </div>
 
           <div class="flex items-center justify-start">
             <div class="text-4xl font-bold font-jose">
-              <span class="counter font-jose" data-count="155">0</span>k
+              <span class="counter font-jose" data-count="155">155</span>k
             </div>
             <h4 class="m-2 text-xl font-bold">Khách hàng đã phục vụ</h4>
           </div>
 
           <div class="flex items-center justify-start">
             <div class="text-4xl font-bold font-jose">
-              <span class="counter font-jose" data-count="99">0</span>%
+              <span class="counter font-jose" data-count="99">99</span>%
             </div>
             <h4 class="m-2 text-xl font-bold">Khách hàng hài lòng</h4>
           </div>
 
           <div class="flex items-center justify-start">
             <div class="text-4xl font-bold font-jose">
-              <span class="counter font-jose" data-count="3">0</span>k
+              <span class="counter font-jose" data-count="3">3</span>k
             </div>
             <h4 class="m-2 text-xl font-bold">Việc làm cho người lao động</h4>
           </div>
@@ -845,68 +908,5 @@
 
     <div class="overlay"></div>
     <script src="js/main.js"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Waypoints -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-
-    <!-- Counter-Up -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-
-    <!-- Slick JS -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
-    <script>
-      $(document).ready(function () {
-        $(".counter").each(function () {
-          let $this = $(this);
-          $this.text($this.attr("data-count"));
-          $this.counterUp({
-            delay: 10,
-            time: 1000,
-          });
-        });
-      });
-      function toggleSearchModal() {
-        const modal = document.getElementById("searchModal");
-        modal.classList.toggle("hidden");
-        modal.classList.toggle("flex");
-      }
-      // Carousel
-      $(document).ready(function () {
-        $(".carousel").slick({
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          autoplay: true,
-          autoplaySpeed: 10000,
-          infinite: true,
-          speed: 500,
-          prevArrow:
-            '<button class="slick-prev custom-prev"><i class="fa-solid fa-angle-left"></i></button>',
-          nextArrow:
-            '<button class="slick-next custom-next"><i class="fa-solid fa-angle-right"></i></button>',
-          pauseOnHover: true,
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-              },
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-              },
-            },
-          ],
-        });
-      });
-    </script>
   </body>
 </html>
